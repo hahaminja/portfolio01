@@ -1,0 +1,212 @@
+html > body{
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
+/* 노멀라이징 */
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/* 라이브러리 */
+.img{
+    max-width: 100%;
+    display: block;
+}
+
+.w-full{
+    width: 100%;
+}
+
+.h-full{
+    height: 100%;
+}
+
+.w-100-box{
+    width: 100%;
+    position: relative;
+}
+
+.w-25-box{
+    width: 25%;
+}
+
+.h-530-box{
+    padding-bottom: 53%;
+}
+
+.h-100-box{
+    padding-bottom: 100%;
+}
+
+.text-box{
+    width: 300px;
+    height: 350px;
+    background-color:#fff;
+    position: absolute;
+    bottom: -30px;
+    right:30px;
+    border: 1px solid black;
+    padding:30px 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.text-box > p{
+    margin-top: 20px;
+    line-height: 25px;
+}
+
+.text-box > span{
+    display: block;
+    font-size: 13px;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+.middle-title-box{
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin:70px;
+}
+
+.block{
+    display: block;
+}
+
+.cell{
+    float: left;
+}
+.cell-r{
+    float: right;
+}
+.row::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.con{
+    max-width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bg-blue{
+    background-color: blue;
+}
+.bg-pink{
+    background-color: pink;
+}
+.bg-green{
+    background-color: green;
+}
+.mt-20px{
+    margin-top: 20px;
+}
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.m-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-grow{
+    flex-grow: 1;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.self-center{
+    align-self: center;
+}
+
+.img-box{
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* 스타일 */
+.top-bar-wrap > .top-bar-logo > .logo-box{
+    width: calc(100% / 3);
+}
+
+.top-bar-wrap > .top-bar-logo > .left > ul > li:not(:last-child) > a{
+    margin-right: 20px;
+    font-size: 14px;
+    border: 0px solid black;
+    border-right-width: 1px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.top-bar-wrap > .top-bar-logo > .logo-box-center{
+    width: calc(100% / 3);
+    margin: 0 auto;
+}
+
+.top-bar-wrap > .top-bar-logo > .right > ul > li > a{
+    margin-right: 20px;
+}
+
+.menu-box-wrap > .menu-box{
+    padding:0 10px;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.menu-box-wrap > .menu-box > li:hover > a{
+    text-decoration: underline;
+}
+
+.product-wrap > .product-list{
+    height: 400px;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+} 
+
+.product-wrap > .product-list >.product-info{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.product-wrap > .product-list >.product-info:hover{
+    text-decoration: underline;
+}
+
+.product-wrap > .product-list >.product-cart > a{
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.section02 > .product-wrap > .product-list >.product-cart > a:hover{
+    background-color:#efefef;
+}

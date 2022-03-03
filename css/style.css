@@ -52,11 +52,16 @@ a{
     background-color:#fff;
     position: absolute;
     bottom: -30px;
-    right:30px;
     border: 1px solid black;
     padding:30px 40px;
     box-sizing: border-box;
     text-align: center;
+}
+.right{
+    right:30px;
+}
+.left{
+    left: 30px;
 }
 
 .text-box > p{
@@ -207,6 +212,6 @@ a{
     left: 50%;
     transform: translateX(-50%);
 }
-.section02 > .product-wrap > .product-list >.product-cart > a:hover{
+.product-wrap > .product-list >.product-cart > a:hover{
     background-color:#efefef;
 }

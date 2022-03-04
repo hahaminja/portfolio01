@@ -46,46 +46,68 @@ a{
     padding-bottom: 100%;
 }
 
-.text-box{
-    width: 300px;
-    height: 350px;
-    background-color:#fff;
-    position: absolute;
-    bottom: -30px;
-    border: 1px solid black;
-    padding:30px 40px;
-    box-sizing: border-box;
-    text-align: center;
-}
-.right{
-    right:30px;
-}
-.left{
-    left: 30px;
-}
-
-.text-box > p{
-    margin-top: 20px;
-    line-height: 25px;
-}
-
-.text-box > span{
-    display: block;
-    font-size: 13px;
-    margin-top: 20px;
-    text-decoration: underline;
-}
-
 .middle-title-box{
     display: block;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 700;
-    margin:70px;
+    margin-top: 70px;
+    margin-bottom: 30px;
 }
 
 .block{
     display: block;
+}
+
+.section{
+    position: relative;
+}
+
+.text-wrap{
+    width: 300px;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: -10%;
+}
+.right{
+    right:20px;
+}
+.left{
+    left:20px;
+}
+.text-wrap > .text-box{
+    width: 100%;
+    border: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.text-wrap > .text-box > .title > p{
+    font-size: 30px;
+}
+.text-wrap > .text-box > .title > .text1{
+    vertical-align: top;
+    font-size: 1.5rem;
+}
+.text-wrap > .text-box > .title > .text2{
+    font-size: 50px;
+    color: #ABC272;
+    vertical-align: top;
+    transform: translateY(-50px);
+}
+.text-wrap > .text-box > .info{
+    font-style: italic;
+    margin-top: 20px;
+    line-height: 1.5rem;
+    font-size: 15px;
+}
+.text-wrap > .text-box > .discover-btn > a{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color:#ABC272 ;
+    font-size: 15px;
 }
 
 .cell{
@@ -113,9 +135,15 @@ a{
 .bg-green{
     background-color: green;
 }
+
+.mt-30px{
+    margin-top: 30px;
+}
+
 .mt-20px{
     margin-top: 20px;
 }
+
 .mx-auto{
     margin-left: auto;
     margin-right: auto;
@@ -154,6 +182,26 @@ a{
 
 
 /* 스타일 */
+/* 탑버튼 시작 */
+.top-btn{
+    position: fixed;
+    right: 20px;
+    bottom: 0;
+    font-size: 3rem;
+    color: rgb(165, 165, 165);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.top-btn.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 탑버튼 끝 */
+
+
+/* 상단 로고 시작 */
 .top-bar-wrap > .top-bar-logo > .logo-box{
     width: calc(100% / 3);
 }
@@ -175,7 +223,8 @@ a{
 .top-bar-wrap > .top-bar-logo > .right > ul > li > a{
     margin-right: 20px;
 }
-
+/* 상단_로고 끝 */
+/* 메뉴박스 시작 */
 .menu-box-wrap > .menu-box{
     padding:0 10px;
     justify-content: space-around;
@@ -184,7 +233,8 @@ a{
 .menu-box-wrap > .menu-box > li:hover > a{
     text-decoration: underline;
 }
-
+/* 메뉴박스 끝 */
+/* 제품리스트 */
 .product-wrap > .product-list{
     height: 400px;
     padding: 40px;

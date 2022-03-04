@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>diptyqueparis_copy</title>
     <!-- 제이쿼리 링크하는 자리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- 웹폰트/폰트어썸/외부 자바스크립트(슬릭)시작 -->
     <!-- 웹폰트 -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
-<!-- 폰트어썸 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- 웹폰트/폰트어썸/외부 자바스크립트(슬릭)끝 -->
     <!-- 내가 만든 js/css -->
@@ -20,7 +21,11 @@
     <script src="./js/script.js"></script>
 </head>
 <body>
-    <header class="top-bar-wrap mt-20px">
+    <div class="top-btn">
+        <a href="#"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
+
+    <header class="top-bar-wrap mt-30px">
      <div class="top-bar-logo con row">
          <div class="logo-box left cell">
              <ul class="row">
@@ -43,7 +48,7 @@
        
     </header>
 
-    <nav class="menu-box-wrap con mt-20px">
+    <nav class="menu-box-wrap con mt-30px">
         <ul class="menu-box flex">
             <li><a href="#">New & Trending</a></li>
             <li><a href="#">Fragrances</a></li>
@@ -56,27 +61,37 @@
         </ul>
     </nav>
 
-    <div class="section main-section01 con mt-20px">
+    <div class="section main-section01 con mt-30px">
 
         <div class="w-100-box">
             <a href="#"><div class="img-box h-530-box" style="background-image: url(./img/main_visual_01.jpg.webp);"></div></a>
-
-            <div class="text-box right">
-                <h3>FRONT and Center</h3>
-                <p><i>… Chamomile, Artichoke, Lychee and Rose candles come together to form a most remarkable quartet. Once lit, the four limited-edition candles reveal the rose's unexpected notes and create a lovely bouquet.</i></p>
-                <span style="color: darkseagreen;">DISCOVER</span>
+        </div>
+        
+        <div class="text-wrap right">
+            <div class="text-box">
+                <div class="title">
+                    <p>FRONT</p>
+                    <span class="text1">and</span>
+                    <span class="text2"><i>center...</i></span>
+                </div>
+                <div class="info">
+                    … Chamomile, Artichoke, Lychee and Rose candles come together to form a most remarkable quartet. Once lit, the four limited-edition candles reveal the rose's unexpected notes and create a lovely bouquet.
+                </div>
+                <div class="discover-btn">
+                    <a href="#" class="block">DISCOVER</a>
+                </div>
             </div>
         </div>
         
 
-        </div>
+
     </div>
 
     
     <span class="middle-title-box text-center">━━ A DAZZLING QUARTET ━━</span>
     
 
-    <div class="section section02 mt-20px con">
+    <div class="section product01 mt-10px con">
     
         <div class="product-wrap flex">
             <div class="product-list w-25-box">
@@ -128,22 +143,32 @@
 
     </div>
 
-    <div class="section main-section02 con mt-20px">
+    <div class="section main-section02 con mt-30px">
         <div class="w-100-box">
             <a href="#">
                 <div class="img-box h-530-box" style="background-image: url(./img/main_visual_02.jpg.webp);"></div>
             </a>
-            <div class="text-box left">
-                <h3>FRONT and Center</h3>
-                <p><i>… Chamomile, Artichoke, Lychee and Rose candles come together to form a most remarkable quartet. Once lit, the four limited-edition candles reveal the rose's unexpected notes and create a lovely bouquet.</i></p>
-                <span style="color: darkseagreen;">DISCOVER</span>
+
+            <div class="text-wrap left">
+                <div class="text-box">
+                    <div class="title">
+                        <p>IT'S A UNIQUE</p>
+                        <i style="font-size: 3rem; color: #BE424D;">flower…</i>
+                    </div>
+                    <div class="info">
+                        …that emerges from the Eau Rose eau de parfum, the Maison's latest creation. Naturally exuberant and with a greater concentration than in the eau de toilette, here the rose's unexpected notes—artichoke, chamomile and lychee—come out to play.
+                    </div>
+                    <div class="discover-btn">
+                        <a href="#" class="block">DISCOVER</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <span class="middle-title-box text-center">━━ DISCOVER ━━</span>
     
-    <div class="section section03 mt-20px con">
+    <div class="section product02 mt-20px con">
     
         <div class="product-wrap flex">
             <div class="product-list w-25-box">
@@ -195,17 +220,86 @@
 
     </div>
 
-    <div class="section main-section03 con mt-20px">
+    <div class="section main-section03 con mt-30px">
         <div class="w-100-box">
             <a href="#">
                 <div class="img-box h-530-box" style="background-image: url(./img/main_visual_03.png);"></div>
             </a>
-            <div class="text-box left">
-                <h3>BACK TO the source</h3>
-                <p><i>La Maison’s archives reveal all their artistic splendor. Friezes, wallpapers, panoramic decors… Welcome to the collection of wall decor made by diptyque.</i></p>
-                <span style="color: darkseagreen;">DISCOVER</span>
+
+            <div class="text-wrap left">
+                <div class="text-box">
+                    <div class="title">
+                        <p>BACK TO</p>
+                        <span class="text1">the</span>
+                        <span class="text2" style="color: #72C7D0;"><i>source</i></span>
+                    </div>
+                    <div class="info">
+                        La Maison’s archives reveal all their artistic splendor. Friezes, wallpapers, panoramic decors… Welcome to the collection of wall decor made by diptyque.
+                    </div>
+                    <div class="discover-btn">
+                        <a href="#" class="block" style="color:#72C7D0;">DISCOVER</a>
+                    </div>
+                </div>
             </div>
+
+
         </div>
     </div>
+
+    <span class="middle-title-box text-center">━━ DISCOVER WALLPAPER ━━</span>
+    
+    <div class="section product03 mt-20px con">
+    
+        <div class="product-wrap flex">
+            <div class="product-list w-25-box">
+               <div class="product-img img-box h-100-box" style="background-image: url(./img/discover_wallpaper_01.jpg.webp);">
+                   
+               </div>
+               <div class="product-info">
+                   <a href="#"><p>JARDIN CLOS PANORAMIC DECOR</p></a>
+               </div>
+               <div class="product-cart">
+                   <a href="#">ADD TO CART</a>
+               </div>
+            </div>
+            <div class="product-list w-25-box">
+               <div class="product-img img-box h-100-box" style="background-image: url(./img/discover_wallpaper_02.jpg.webp);">
+                   
+               </div>
+               <div class="product-info">
+                   <a href="#"><p>SARAYI WALLPAPER</p></a>
+               </div>
+               <div class="product-cart">
+                   <a href="#">ADD TO CART</a>
+               </div>
+            </div>
+            <div class="product-list w-25-box">
+               <div class="product-img img-box h-100-box" style="background-image: url(./img/discover_wallpaper_03.jpg.webp);">
+                   
+               </div>
+               <div class="product-info">
+                   <a href="#"><p>ODALISQUE WALLPAPER</p></a>
+               </div>
+               <div class="product-cart">
+                   <a href="#">ADD TO CART</a>
+               </div>
+            </div>
+            <div class="product-list w-25-box">
+               <div class="product-img img-box h-100-box" style="background-image: url(./img/discover_wallpaper_04.jpg.webp);">
+                   
+               </div>
+               <div class="product-info">
+                   <a href="#"><p>EXCENTRIC WALLPAPER</p></a>
+               </div>
+               <div class="product-cart">
+                   <a href="#">ADD TO CART</a>
+               </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
 </body>
 </html>

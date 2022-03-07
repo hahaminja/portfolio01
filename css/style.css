@@ -1,4 +1,4 @@
-html > body{
+html > body , input{
     font-family: 'Cormorant Garamond', serif;
 }
 
@@ -34,6 +34,11 @@ a{
     position: relative;
 }
 
+.w-50-box{
+    width: 50%;
+    position: relative;
+}
+
 .w-25-box{
     width: 25%;
 }
@@ -41,9 +46,20 @@ a{
 .h-530-box{
     padding-bottom: 53%;
 }
+.h-835-box{
+    padding-bottom: 83.5%;
+}
+
+.h-1187-box{
+    padding-bottom: 118.7%;
+}
 
 .h-100-box{
     padding-bottom: 100%;
+}
+
+.h-120-box{
+    height: 120px;
 }
 
 .middle-title-box{
@@ -57,6 +73,9 @@ a{
 
 .block{
     display: block;
+}
+.inline-block{
+    display: inline-block;
 }
 
 .section{
@@ -77,44 +96,15 @@ a{
 .left{
     left:20px;
 }
-.text-wrap > .text-box{
-    width: 100%;
-    border: 1px solid black;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.text-wrap > .text-box > .title > p{
-    font-size: 30px;
-}
-.text-wrap > .text-box > .title > .text1{
-    vertical-align: top;
-    font-size: 1.5rem;
-}
-.text-wrap > .text-box > .title > .text2{
-    font-size: 50px;
-    color: #ABC272;
-    vertical-align: top;
-    transform: translateY(-50px);
-}
-.text-wrap > .text-box > .info{
-    font-style: italic;
-    margin-top: 20px;
-    line-height: 1.5rem;
-    font-size: 15px;
-}
-.text-wrap > .text-box > .discover-btn > a{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-decoration: underline;
-    color:#ABC272 ;
-    font-size: 15px;
-}
 
 .cell{
     float: left;
 }
 .cell-r{
     float: right;
+}
+.cell-center{
+    float: center;
 }
 .row::after{
     display: block;
@@ -132,10 +122,12 @@ a{
 .bg-pink{
     background-color: pink;
 }
-.bg-green{
-    background-color: green;
+.bg-black{
+    background-color: black;
 }
-
+.text-white{
+    color:white;
+}
 .mt-30px{
     margin-top: 30px;
 }
@@ -143,13 +135,10 @@ a{
 .mt-20px{
     margin-top: 20px;
 }
-
-.mx-auto{
-    margin-left: auto;
-    margin-right: auto;
+.mt-10px{
+    margin-top: 10px;
 }
-
-.m-auto{
+.mx-auto{
     margin-left: auto;
     margin-right: auto;
 }
@@ -158,40 +147,93 @@ a{
     display: flex;
 }
 
+.flex1{
+    flex: 1 1 0;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.gap-10px{
+    gap: 10px;
+}
+
+.gap-30px{
+    gap: 30px;
+}
+
 .flex-grow{
     flex-grow: 1;
 }
-
+.px-10{
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+}
+.mx-20px{
+    margin-right: 20px;
+    margin-left: 20px;
+}
 .justify-center{
     justify-content: center;
 }
-
+.text-end{
+    text-align: end;
+}
+.text-start{
+    text-align: start;
+}
 .text-center{
     text-align: center;
 }
-
 .self-center{
     align-self: center;
 }
-
+.font-15px{
+    font-size: 15px;
+}
+.font-12px{
+    font-size: 12px;
+}
+.font-14px{
+    font-size: 14px;
+}
 .img-box{
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
-
+.relative{
+    position: relative;
+}
+.ab-top-right20{
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+.pt-10px{
+    padding-top: 10px;
+}
 
 /* 스타일 */
 /* 탑버튼 시작 */
 .top-btn{
     position: fixed;
-    right: 20px;
-    bottom: 0;
-    font-size: 3rem;
-    color: rgb(165, 165, 165);
+    right: 30px;
+    bottom: 20px;
+    color:#ddd;
     opacity: 0;
     visibility: hidden;
     transition: 0.5s;
+    width: 40px;
+    height: 40px;
+    background-color:#fff;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
 }
 .top-btn.active{
     opacity: 1;
@@ -199,13 +241,10 @@ a{
 }
 
 /* 탑버튼 끝 */
-
-
 /* 상단 로고 시작 */
 .top-bar-wrap > .top-bar-logo > .logo-box{
     width: calc(100% / 3);
 }
-
 .top-bar-wrap > .top-bar-logo > .left > ul > li:not(:last-child) > a{
     margin-right: 20px;
     font-size: 14px;
@@ -223,6 +262,13 @@ a{
 .top-bar-wrap > .top-bar-logo > .right > ul > li > a{
     margin-right: 20px;
 }
+/* 로고 - 검색창 */
+.search{
+    padding: 10px;
+    background-color:#efefef;
+    border: 0;
+}
+
 /* 상단_로고 끝 */
 /* 메뉴박스 시작 */
 .menu-box-wrap > .menu-box{
@@ -230,10 +276,80 @@ a{
     justify-content: space-around;
     font-size: 20px;
 }
-.menu-box-wrap > .menu-box > li:hover > a{
+.menu-box-wrap > .menu-box > li{
+    position: relative;
+}
+.menu-box-wrap > .menu-box > li::after{
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color:black;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+.menu-box-wrap > .menu-box > li:hover::after{
+    width: 100%;
+}
+
+/* 메뉴박스 끝 */
+/* 메인비쥬얼_텍스트 */
+.text-wrap > .text-box{
+    width: 100%;
+    border: 1px solid black;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+.text-wrap > .text-box > .title > p{
+    font-size: 30px;
+}
+.text-wrap > .text-box > .title > .text1{
+    vertical-align: top;
+    font-size: 1.5rem;
+}
+.text-wrap > .text-box > .title > .text2{
+    font-size: 50px;
+    color: #ABC272;
+    vertical-align: top;
+    transform: translateY(-50px);
+}
+.text-wrap > .text-box > .info{
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 1.3rem;
+    font-size: 15px;
+}
+.text-wrap > .text-box > .discover-btn > a{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color:#ABC272 ;
+    font-size: 15px;
+}
+/* 메인비쥬얼_남자모델_텍스트 */
+.visual_text{
+    padding: 30px 40px;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow:0 0 10px #aaa;
+}
+.visual_text > p{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.visual_text > span{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.visual_text > .discover-btn{
+    margin-top: 30px;
+    font-size: 15px;
+    letter-spacing: 2px;
     text-decoration: underline;
 }
-/* 메뉴박스 끝 */
+
 /* 제품리스트 */
 .product-wrap > .product-list{
     height: 400px;
@@ -244,6 +360,8 @@ a{
 
 .product-wrap > .product-list >.product-info{
     margin-top: 10px;
+    font-size: 15px;
+    line-height: 16px;
     text-align: center;
 }
 
@@ -265,3 +383,139 @@ a{
 .product-wrap > .product-list >.product-cart > a:hover{
     background-color:#efefef;
 }
+/* 메인5 남자모델 */
+.main-section05 > .w-50-box{
+    padding: 30px;
+}
+
+/* 하단 슬라이드 시작 */
+.main-slid-wrap {
+    margin-top: 40px;
+}
+
+.main-slid-wrap > .slide-box{
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-slid-wrap > .slide-box .content {
+    margin-right: 30px;
+    margin-left: 30px;
+    position: relative;
+}
+.main-slid-wrap > .slide-box .content > .text-box{
+    height: 100px;
+}
+.main-slid-wrap > .slide-box .content > .text-box > p{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.main-slid-wrap > .slide-box .content > .text-box > span{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-style: italic;
+    color: #aaa;
+}
+
+.main-slid-wrap > .arrows-btn{
+    font-size: 3.5rem;
+}
+.main-slid-wrap{
+    position: relative;
+}
+
+.main-slid-wrap .arrows-btn .prev-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #aaa;
+}
+.main-slid-wrap .arrows-btn .next-btn{
+    position: absolute ;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: #aaa;
+}
+/* 슬라이드 끝 */
+/* 메인 bottom 시작 */
+.bottom-box{
+    margin-top: 50px;
+    border-top: 1px solid black;
+    box-sizing: border-box;
+}
+.bottom-content{
+    padding: 20px 10px;
+}
+.bottom-content > .img-box{
+    text-align: center;
+    align-self: center;
+}
+.bottom-content > p{
+    font-size: 13px;
+    line-height: 14px;
+    text-align: left;
+    margin-left: 20px;
+}
+/* 메인 bottom 끝 */
+/* 푸터 시작 */
+.footer-menu .menu {
+    margin-top: 40px;
+    height: 250px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+.footer-menu .menu > span{
+    font-size: 15px;
+    color: white;
+}
+.footer-menu .menu > ul:first-child{
+    margin-left: 30px;
+}
+.footer-menu .menu > ul > li > a{
+    font-size: 14px;
+    color: #aaa;
+}
+.footer-menu .menu > ul > li:hover > a{
+    color: white;
+    text-decoration: underline;
+}
+/* 푸터-sns */
+.footer-follow .sns-logo > a{
+    display:inline-block;
+    font-size: 2.5rem;
+    color: white;
+    margin: 30px 20px;
+}
+.footer-follow > .email-box .email{
+    width: 250px;
+    padding: 10px 10px;
+    font-style: italic;
+}
+/* 푸터-sns 끝 */
+.footer-info > div{
+    color: white;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.footer-info .cookies{
+    background-color: white;
+    display:inline-block;
+    padding: 7px 15px;
+    font-size: 12px;
+    margin-top: 20px;
+    color: black;
+}
+
+.footer-card > .card-box{
+    background-color: red;
+}
+.footer-card > .card-box >  img{
+    display: inline-block;
+}
+/* 푸터 끝 */

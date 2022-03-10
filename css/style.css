@@ -7,6 +7,7 @@ html > body , input{
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 ul, li{
     list-style: none;
@@ -37,6 +38,9 @@ a{
 .w-50-box{
     width: 50%;
     position: relative;
+}
+.w-333-box{
+    width: calc(100% / 3);
 }
 
 .w-25-box{
@@ -103,9 +107,7 @@ a{
 .cell-r{
     float: right;
 }
-.cell-center{
-    float: center;
-}
+
 .row::after{
     display: block;
     content: "";
@@ -115,6 +117,9 @@ a{
     max-width: 1220px;
     margin-left: auto;
     margin-right: auto;
+}
+.bg-white{
+    background-color: #fff;
 }
 .bg-blue{
     background-color: blue;
@@ -175,6 +180,18 @@ a{
     margin-right: 20px;
     margin-left: 20px;
 }
+.my-20px{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.my-30px{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.justify-between{
+    justify-content: space-between
+}
 .justify-center{
     justify-content: center;
 }
@@ -215,7 +232,18 @@ a{
 .pt-10px{
     padding-top: 10px;
 }
+.pd-30px{
+    padding: 30px;
+}
 
+.bold{
+    font-weight: bold;
+}
+.absolute{
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
 /* 스타일 */
 /* 탑버튼 시작 */
 .top-btn{
@@ -264,7 +292,7 @@ a{
 }
 /* 로고 - 검색창 */
 .search{
-    padding: 10px;
+    padding: 7px 10px;
     background-color:#efefef;
     border: 0;
 }
@@ -278,6 +306,7 @@ a{
 }
 .menu-box-wrap > .menu-box > li{
     position: relative;
+    padding-bottom: 30px;
 }
 .menu-box-wrap > .menu-box > li::after{
     content: "";
@@ -293,7 +322,101 @@ a{
 }
 
 /* 메뉴박스 끝 */
+/* nav-메뉴 시작 */
+/* nav-img-content*/
+.nav-2-depth-wrap{
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    z-index: 9;
+    font-size: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.nav-2-depth-wrap.active{
+    opacity: 1;
+    visibility: visible;
+}
+.nav-2-depth-wrap > .nav-2-depth{
+    position: relative;
+}
+.nav-2-depth-wrap > .nav-2-depth > .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.nav-2-depth-wrap > .nav-2-depth > .content.active{
+    opacity: 1;
+    visibility: visible;
+}
+.nav-2-depth .img-content > ul li:not(:last-child){
+    border-right: 1px solid #ddd;
+}
+.nav-2-depth .img-content > ul > li{
+    position: relative;
+}
+
+.nav-2-depth .img-content > ul > li{
+    padding: 0 30px;
+}
+
+.nav-2-depth .img-content > ul > li > p:hover{
+    text-decoration: underline;
+}
+/* nav-img-content*/
+/* nav - content - nav-menu */
+.nav-2-depth > .content > .nav-menu{
+    width: 50%;
+    height: 100%;
+}
+.left-menu-wrap > .left-menu{
+    margin-top: 30px;
+    margin-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-right: 1px solid #ddd;
+}
+.left-menu-wrap > .left-menu:last-child{
+    border-right-width: 0;
+}
+.left-menu-wrap > .left-menu > span{
+    font-weight: bold;
+}
+.left-menu-wrap > .left-menu > ul > li{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.left-menu-wrap > .left-menu > ul > li > a{
+    display: block;
+    width: 100%;
+}
+.left-menu-wrap > .left-menu > ul > li:hover > a{
+    text-decoration: underline;
+}
+.right-menu-wrap > .right-menu{
+    width: calc((100% / 2) - 10px);
+    border: 1px solid #ddd;
+}
+.right-menu-wrap > .right-menu > .img-box{
+    margin-bottom: 20px;
+}
+.right-menu-wrap > .right-menu p{
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 10px 2px;
+}
+/* nav - content - nav-menu */
+/* nav-메뉴 끝 */
 /* 메인비쥬얼_텍스트 */
+.text-wrap{
+    width: 320px;
+}
 .text-wrap > .text-box{
     width: 100%;
     border: 1px solid black;
@@ -301,7 +424,7 @@ a{
     box-sizing: border-box;
 }
 .text-wrap > .text-box > .title > p{
-    font-size: 30px;
+    font-size: 27px;
 }
 .text-wrap > .text-box > .title > .text1{
     vertical-align: top;
@@ -385,12 +508,12 @@ a{
 }
 /* 메인5 남자모델 */
 .main-section05 > .w-50-box{
-    padding: 30px;
+    padding: 40px 70px;
 }
 
 /* 하단 슬라이드 시작 */
 .main-slid-wrap {
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .main-slid-wrap > .slide-box{
@@ -513,9 +636,15 @@ a{
 }
 
 .footer-card > .card-box{
-    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.footer-card > .card-box >  img{
-    display: inline-block;
+.footer-card > .card-box > img{
+    width: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 70px;
 }
+
 /* 푸터 끝 */
